@@ -13,8 +13,7 @@ import NotifyCart from "../components/NotifyCart";
 import Spacer from "../components/Spacer";
 import OutOfDeliveryRangeMessage from "../components/OutOfDeliveryRangeMessage";
 import PriceOffers from "../components/PriceOffers";
-import MinimumOrder from "../components/MinimunOrder";
-import { StyledBackgroundImage, StyledSpacer, YStack, XStack, StyledText } from 'fluent-styles';
+import { StyledBackgroundImage, StyledSpacer, YStack, XStack, StyledText, FlexStyledImage } from 'fluent-styles';
 import { fontStyles } from "../util/fontStyles";
 import { theme } from "../util/theme";
 import { ensureHttps, formatAddress } from "../util/helpers";
@@ -23,16 +22,24 @@ import CategoryScrollView from "../components/package/category";
 import MyCurrentLocation from "../components/MyCurrentLocation";
 
 const Start = ({ navigation }) => {
-	const { seller} = useAppContext()
+	const { seller } = useAppContext()
 	const { data, loading } = useCatalogue(seller._id)
-	
+
 	return (
 		<SafeAreaView style={{ flex: 1, flexDirection: "column" }}>
 			<Spacer />
 			<View style={[styles.container, styles.backgroundColor]}>
 				<View style={styles.header}>
-				<MyCurrentLocation />
-				<View style={{flex : 1}} />
+					<FlexStyledImage
+						local={true}
+						height={48}
+						width={48}
+						borderColor={theme.colors.gray[1]}
+						imageUrl={require("../assets/images/icons8-shopper-100.png")}
+					/>
+					<View style={{ marginHorizontal: 2 }} />
+					<MyCurrentLocation />
+					<View style={{ flex: 1 }} />
 					<View style={styles.notifyContainer}>
 						<NotifyCart navigation={navigation} />
 					</View>
@@ -131,7 +138,7 @@ const styles = StyleSheet.create({
 		paddingVertical: 16
 	},
 	labelContainer: {
-		marginTop: 4,
+		marginTop: 8,
 
 	},
 	notifyContainer: {

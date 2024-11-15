@@ -15,7 +15,7 @@ const MyCurrentLocation = () => {
                 fontFamily={fontStyles.Roboto_Regular}
                 fontWeight={theme.fontWeight.normal}
                 color={theme.colors.gray[800]}
-                fontSize={theme.fontSize.small}
+                fontSize={theme.fontSize.nano}
             >
                 Your Current location
             </StyledText>
@@ -34,7 +34,7 @@ const MyCurrentLocation = () => {
                     color={theme.colors.gray[500]}
                     fontSize={theme.fontSize.nano}
                 >
-                    {data?.city}  {data?.country}
+                    {data?.city}, {data?.country}
                 </StyledText>
             </XStack>
         </YStack>
