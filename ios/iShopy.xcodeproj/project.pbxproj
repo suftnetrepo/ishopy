@@ -8,13 +8,35 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* iShopyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* iShopyTests.m */; };
-		0C80B921A6F3F58F76C31292 /* libPods-iShopy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-iShopy.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		7699B88040F8A987B510C191 /* libPods-iShopy-iShopyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-iShopy-iShopyTests.a */; };
+		365E25B62CE4E4D100A95B88 /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 365E25922CE4E4D100A95B88 /* AntDesign.ttf */; };
+		365E25B82CE4E4D100A95B88 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 365E25A82CE4E4D100A95B88 /* Roboto-Bold.ttf */; };
+		365E25B92CE4E4D100A95B88 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 365E25A22CE4E4D100A95B88 /* Octicons.ttf */; };
+		365E25BB2CE4E4D100A95B88 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 365E25AF2CE4E4D100A95B88 /* Roboto-Regular.ttf */; };
+		365E25BD2CE4E4D100A95B88 /* CrimsonText-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 365E25942CE4E4D100A95B88 /* CrimsonText-Italic.ttf */; };
+		365E25BE2CE4E4D100A95B88 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 365E25B22CE4E4D100A95B88 /* SimpleLineIcons.ttf */; };
+		365E25C02CE4E4D100A95B88 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 365E25A02CE4E4D100A95B88 /* MaterialCommunityIcons.ttf */; };
+		365E25C12CE4E4D100A95B88 /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 365E259C2CE4E4D100A95B88 /* FontAwesome5_Solid.ttf */; };
+		365E25C22CE4E4D100A95B88 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 365E25992CE4E4D100A95B88 /* FontAwesome.ttf */; };
+		365E25C32CE4E4D100A95B88 /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 365E259A2CE4E4D100A95B88 /* FontAwesome5_Brands.ttf */; };
+		365E25C42CE4E4D100A95B88 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 365E259F2CE4E4D100A95B88 /* Ionicons.ttf */; };
+		365E25C62CE4E4D100A95B88 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 365E25972CE4E4D100A95B88 /* EvilIcons.ttf */; };
+		365E25C82CE4E4D100A95B88 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 365E25A12CE4E4D100A95B88 /* MaterialIcons.ttf */; };
+		365E25C92CE4E4D100A95B88 /* CrimsonText-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 365E25952CE4E4D100A95B88 /* CrimsonText-Regular.ttf */; };
+		365E25CB2CE4E4D100A95B88 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 365E25962CE4E4D100A95B88 /* Entypo.ttf */; };
+		365E25CC2CE4E4D100A95B88 /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 365E259D2CE4E4D100A95B88 /* Fontisto.ttf */; };
+		365E25CD2CE4E4D100A95B88 /* CrimsonText-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 365E25932CE4E4D100A95B88 /* CrimsonText-Bold.ttf */; };
+		365E25CE2CE4E4D100A95B88 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 365E259E2CE4E4D100A95B88 /* Foundation.ttf */; };
+		365E25D12CE4E4D100A95B88 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 365E25AA2CE4E4D100A95B88 /* Roboto-Italic.ttf */; };
+		365E25D22CE4E4D100A95B88 /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 365E259B2CE4E4D100A95B88 /* FontAwesome5_Regular.ttf */; };
+		365E25D32CE4E4D100A95B88 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 365E25982CE4E4D100A95B88 /* Feather.ttf */; };
+		365E25D42CE4E4D100A95B88 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 365E25B32CE4E4D100A95B88 /* Zocial.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		AF8F76E126942B9C35D6CE9C /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
+		B11C8E07966F0DF3EB2FCE6D /* libPods-iShopy-iShopyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B4833655A4FC15BFFBE59CD /* libPods-iShopy-iShopyTests.a */; };
+		CFE0CDCE3236D19369050F72 /* libPods-iShopy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A6EA8D1355E0B004FE4954C /* libPods-iShopy.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,14 +60,36 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = iShopy/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = iShopy/main.m; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = iShopy/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		19F6CBCC0A4E27FBF8BF4A61 /* libPods-iShopy-iShopyTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iShopy-iShopyTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B4392A12AC88292D35C810B /* Pods-iShopy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iShopy.debug.xcconfig"; path = "Target Support Files/Pods-iShopy/Pods-iShopy.debug.xcconfig"; sourceTree = "<group>"; };
-		5709B34CF0A7D63546082F79 /* Pods-iShopy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iShopy.release.xcconfig"; path = "Target Support Files/Pods-iShopy/Pods-iShopy.release.xcconfig"; sourceTree = "<group>"; };
-		5B7EB9410499542E8C5724F5 /* Pods-iShopy-iShopyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iShopy-iShopyTests.debug.xcconfig"; path = "Target Support Files/Pods-iShopy-iShopyTests/Pods-iShopy-iShopyTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5DCACB8F33CDC322A6C60F78 /* libPods-iShopy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iShopy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		33D2678554259FE18534921D /* Pods-iShopy-iShopyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iShopy-iShopyTests.release.xcconfig"; path = "Target Support Files/Pods-iShopy-iShopyTests/Pods-iShopy-iShopyTests.release.xcconfig"; sourceTree = "<group>"; };
+		365E25922CE4E4D100A95B88 /* AntDesign.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AntDesign.ttf; sourceTree = "<group>"; };
+		365E25932CE4E4D100A95B88 /* CrimsonText-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CrimsonText-Bold.ttf"; sourceTree = "<group>"; };
+		365E25942CE4E4D100A95B88 /* CrimsonText-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CrimsonText-Italic.ttf"; sourceTree = "<group>"; };
+		365E25952CE4E4D100A95B88 /* CrimsonText-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CrimsonText-Regular.ttf"; sourceTree = "<group>"; };
+		365E25962CE4E4D100A95B88 /* Entypo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Entypo.ttf; sourceTree = "<group>"; };
+		365E25972CE4E4D100A95B88 /* EvilIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EvilIcons.ttf; sourceTree = "<group>"; };
+		365E25982CE4E4D100A95B88 /* Feather.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Feather.ttf; sourceTree = "<group>"; };
+		365E25992CE4E4D100A95B88 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
+		365E259A2CE4E4D100A95B88 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome5_Brands.ttf; sourceTree = "<group>"; };
+		365E259B2CE4E4D100A95B88 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome5_Regular.ttf; sourceTree = "<group>"; };
+		365E259C2CE4E4D100A95B88 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome5_Solid.ttf; sourceTree = "<group>"; };
+		365E259D2CE4E4D100A95B88 /* Fontisto.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fontisto.ttf; sourceTree = "<group>"; };
+		365E259E2CE4E4D100A95B88 /* Foundation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Foundation.ttf; sourceTree = "<group>"; };
+		365E259F2CE4E4D100A95B88 /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ionicons.ttf; sourceTree = "<group>"; };
+		365E25A02CE4E4D100A95B88 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialCommunityIcons.ttf; sourceTree = "<group>"; };
+		365E25A12CE4E4D100A95B88 /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialIcons.ttf; sourceTree = "<group>"; };
+		365E25A22CE4E4D100A95B88 /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Octicons.ttf; sourceTree = "<group>"; };
+		365E25A82CE4E4D100A95B88 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		365E25AA2CE4E4D100A95B88 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		365E25AF2CE4E4D100A95B88 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		365E25B22CE4E4D100A95B88 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleLineIcons.ttf; sourceTree = "<group>"; };
+		365E25B32CE4E4D100A95B88 /* Zocial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Zocial.ttf; sourceTree = "<group>"; };
+		4B4833655A4FC15BFFBE59CD /* libPods-iShopy-iShopyTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iShopy-iShopyTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A6EA8D1355E0B004FE4954C /* libPods-iShopy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iShopy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = iShopy/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		89C6BE57DB24E9ADA2F236DE /* Pods-iShopy-iShopyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iShopy-iShopyTests.release.xcconfig"; path = "Target Support Files/Pods-iShopy-iShopyTests/Pods-iShopy-iShopyTests.release.xcconfig"; sourceTree = "<group>"; };
+		A319041922AE50DE89353812 /* Pods-iShopy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iShopy.debug.xcconfig"; path = "Target Support Files/Pods-iShopy/Pods-iShopy.debug.xcconfig"; sourceTree = "<group>"; };
+		C420D0C7F0EA3CCB43A6EC98 /* Pods-iShopy-iShopyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iShopy-iShopyTests.debug.xcconfig"; path = "Target Support Files/Pods-iShopy-iShopyTests/Pods-iShopy-iShopyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		FBC0FDD3786FAEA528B82B23 /* Pods-iShopy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iShopy.release.xcconfig"; path = "Target Support Files/Pods-iShopy/Pods-iShopy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7699B88040F8A987B510C191 /* libPods-iShopy-iShopyTests.a in Frameworks */,
+				B11C8E07966F0DF3EB2FCE6D /* libPods-iShopy-iShopyTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C80B921A6F3F58F76C31292 /* libPods-iShopy.a in Frameworks */,
+				CFE0CDCE3236D19369050F72 /* libPods-iShopy.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,8 +147,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				5DCACB8F33CDC322A6C60F78 /* libPods-iShopy.a */,
-				19F6CBCC0A4E27FBF8BF4A61 /* libPods-iShopy-iShopyTests.a */,
+				7A6EA8D1355E0B004FE4954C /* libPods-iShopy.a */,
+				4B4833655A4FC15BFFBE59CD /* libPods-iShopy-iShopyTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -119,6 +163,28 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				365E25922CE4E4D100A95B88 /* AntDesign.ttf */,
+				365E25932CE4E4D100A95B88 /* CrimsonText-Bold.ttf */,
+				365E25942CE4E4D100A95B88 /* CrimsonText-Italic.ttf */,
+				365E25952CE4E4D100A95B88 /* CrimsonText-Regular.ttf */,
+				365E25962CE4E4D100A95B88 /* Entypo.ttf */,
+				365E25972CE4E4D100A95B88 /* EvilIcons.ttf */,
+				365E25982CE4E4D100A95B88 /* Feather.ttf */,
+				365E25992CE4E4D100A95B88 /* FontAwesome.ttf */,
+				365E259A2CE4E4D100A95B88 /* FontAwesome5_Brands.ttf */,
+				365E259B2CE4E4D100A95B88 /* FontAwesome5_Regular.ttf */,
+				365E259C2CE4E4D100A95B88 /* FontAwesome5_Solid.ttf */,
+				365E259D2CE4E4D100A95B88 /* Fontisto.ttf */,
+				365E259E2CE4E4D100A95B88 /* Foundation.ttf */,
+				365E259F2CE4E4D100A95B88 /* Ionicons.ttf */,
+				365E25A02CE4E4D100A95B88 /* MaterialCommunityIcons.ttf */,
+				365E25A12CE4E4D100A95B88 /* MaterialIcons.ttf */,
+				365E25A22CE4E4D100A95B88 /* Octicons.ttf */,
+				365E25A82CE4E4D100A95B88 /* Roboto-Bold.ttf */,
+				365E25AA2CE4E4D100A95B88 /* Roboto-Italic.ttf */,
+				365E25AF2CE4E4D100A95B88 /* Roboto-Regular.ttf */,
+				365E25B22CE4E4D100A95B88 /* SimpleLineIcons.ttf */,
+				365E25B32CE4E4D100A95B88 /* Zocial.ttf */,
 				13B07FAE1A68108700A75B9A /* iShopy */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* iShopyTests */,
@@ -143,10 +209,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3B4392A12AC88292D35C810B /* Pods-iShopy.debug.xcconfig */,
-				5709B34CF0A7D63546082F79 /* Pods-iShopy.release.xcconfig */,
-				5B7EB9410499542E8C5724F5 /* Pods-iShopy-iShopyTests.debug.xcconfig */,
-				89C6BE57DB24E9ADA2F236DE /* Pods-iShopy-iShopyTests.release.xcconfig */,
+				A319041922AE50DE89353812 /* Pods-iShopy.debug.xcconfig */,
+				FBC0FDD3786FAEA528B82B23 /* Pods-iShopy.release.xcconfig */,
+				C420D0C7F0EA3CCB43A6EC98 /* Pods-iShopy-iShopyTests.debug.xcconfig */,
+				33D2678554259FE18534921D /* Pods-iShopy-iShopyTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -158,12 +224,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "iShopyTests" */;
 			buildPhases = (
-				A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */,
+				0B1D0252795847EEA7487607 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */,
-				F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */,
+				DA14206F6517605477BA8338 /* [CP] Embed Pods Frameworks */,
+				409CCB6D4EE969E12661896D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -179,13 +245,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "iShopy" */;
 			buildPhases = (
-				C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */,
+				A695D1E513FEABCC1FFF9FB1 /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */,
-				E235C05ADACE081382539298 /* [CP] Copy Pods Resources */,
+				FC39772D44D0DD83753643BD /* [CP] Embed Pods Frameworks */,
+				A8704F5EA52618546E9FC7FA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -244,6 +310,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				365E25B62CE4E4D100A95B88 /* AntDesign.ttf in Resources */,
+				365E25B82CE4E4D100A95B88 /* Roboto-Bold.ttf in Resources */,
+				365E25B92CE4E4D100A95B88 /* Octicons.ttf in Resources */,
+				365E25BB2CE4E4D100A95B88 /* Roboto-Regular.ttf in Resources */,
+				365E25BD2CE4E4D100A95B88 /* CrimsonText-Italic.ttf in Resources */,
+				365E25BE2CE4E4D100A95B88 /* SimpleLineIcons.ttf in Resources */,
+				365E25C02CE4E4D100A95B88 /* MaterialCommunityIcons.ttf in Resources */,
+				365E25C12CE4E4D100A95B88 /* FontAwesome5_Solid.ttf in Resources */,
+				365E25C22CE4E4D100A95B88 /* FontAwesome.ttf in Resources */,
+				365E25C32CE4E4D100A95B88 /* FontAwesome5_Brands.ttf in Resources */,
+				365E25C42CE4E4D100A95B88 /* Ionicons.ttf in Resources */,
+				365E25C62CE4E4D100A95B88 /* EvilIcons.ttf in Resources */,
+				365E25C82CE4E4D100A95B88 /* MaterialIcons.ttf in Resources */,
+				365E25C92CE4E4D100A95B88 /* CrimsonText-Regular.ttf in Resources */,
+				365E25CB2CE4E4D100A95B88 /* Entypo.ttf in Resources */,
+				365E25CC2CE4E4D100A95B88 /* Fontisto.ttf in Resources */,
+				365E25CD2CE4E4D100A95B88 /* CrimsonText-Bold.ttf in Resources */,
+				365E25CE2CE4E4D100A95B88 /* Foundation.ttf in Resources */,
+				365E25D12CE4E4D100A95B88 /* Roboto-Italic.ttf in Resources */,
+				365E25D22CE4E4D100A95B88 /* FontAwesome5_Regular.ttf in Resources */,
+				365E25D32CE4E4D100A95B88 /* Feather.ttf in Resources */,
+				365E25D42CE4E4D100A95B88 /* Zocial.ttf in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				AF8F76E126942B9C35D6CE9C /* PrivacyInfo.xcprivacy in Resources */,
@@ -269,24 +357,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"$REACT_NATIVE_PATH/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"$REACT_NATIVE_PATH/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-iShopy/Pods-iShopy-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-iShopy/Pods-iShopy-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iShopy/Pods-iShopy-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */ = {
+		0B1D0252795847EEA7487607 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -308,7 +379,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */ = {
+		409CCB6D4EE969E12661896D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iShopy-iShopyTests/Pods-iShopy-iShopyTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iShopy-iShopyTests/Pods-iShopy-iShopyTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iShopy-iShopyTests/Pods-iShopy-iShopyTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A695D1E513FEABCC1FFF9FB1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -330,24 +418,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-iShopy-iShopyTests/Pods-iShopy-iShopyTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-iShopy-iShopyTests/Pods-iShopy-iShopyTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iShopy-iShopyTests/Pods-iShopy-iShopyTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E235C05ADACE081382539298 /* [CP] Copy Pods Resources */ = {
+		A8704F5EA52618546E9FC7FA /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -364,21 +435,38 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iShopy/Pods-iShopy-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */ = {
+		DA14206F6517605477BA8338 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-iShopy-iShopyTests/Pods-iShopy-iShopyTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-iShopy-iShopyTests/Pods-iShopy-iShopyTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-iShopy-iShopyTests/Pods-iShopy-iShopyTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-iShopy-iShopyTests/Pods-iShopy-iShopyTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iShopy-iShopyTests/Pods-iShopy-iShopyTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iShopy-iShopyTests/Pods-iShopy-iShopyTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC39772D44D0DD83753643BD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iShopy/Pods-iShopy-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iShopy/Pods-iShopy-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iShopy/Pods-iShopy-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -414,7 +502,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-iShopy-iShopyTests.debug.xcconfig */;
+			baseConfigurationReference = C420D0C7F0EA3CCB43A6EC98 /* Pods-iShopy-iShopyTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -441,7 +529,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-iShopy-iShopyTests.release.xcconfig */;
+			baseConfigurationReference = 33D2678554259FE18534921D /* Pods-iShopy-iShopyTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -465,11 +553,12 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-iShopy.debug.xcconfig */;
+			baseConfigurationReference = A319041922AE50DE89353812 /* Pods-iShopy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZQADUF26X5;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = iShopy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
@@ -493,11 +582,12 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-iShopy.release.xcconfig */;
+			baseConfigurationReference = FBC0FDD3786FAEA528B82B23 /* Pods-iShopy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZQADUF26X5;
 				INFOPLIST_FILE = iShopy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (

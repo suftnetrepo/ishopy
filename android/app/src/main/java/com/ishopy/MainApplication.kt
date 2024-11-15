@@ -1,4 +1,4 @@
-package com.ishopy
+package com.suftnet.b2;
 
 import android.app.Application
 import com.facebook.react.PackageList
