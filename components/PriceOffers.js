@@ -163,7 +163,7 @@ const PriceOffers = ({ navigation }) => {
 				<TouchableOpacity
 					onPress={() => navigation.navigate("product-price-offers")}
 				>
-					<Text style={styles.topItemSeeAll}>See all</Text>
+					<Text style={styles.topItemSeeAll}>View all</Text>
 				</TouchableOpacity>
 			</View>
 			<ScrollView horizontal showsHorizontalScrollIndicator={false}>
@@ -244,9 +244,9 @@ const styles = StyleSheet.create({
 		fontSize: MATERIAL_FONTS_SIZES.font_size_normal,
 	},
 	topItemSeeAll: {
-		color: MATERIAL_COLORS.grey[500],
+		color: MATERIAL_COLORS.green[700],
 		fontFamily: FONT_FAMILY.crimson_text_regular,
-		fontSize: MATERIAL_FONTS_SIZES.font_size_normal,
+		fontSize: MATERIAL_FONTS_SIZES.font_size_small,
 	},
 	topItemsTextContainer: {
 		alignItems: "center",

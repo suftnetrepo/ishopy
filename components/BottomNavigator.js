@@ -82,7 +82,7 @@ export default function BottomNavigator() {
         tabBarIcon: ({ focused }) => {
           return (
             <StyledCycle marginTop={-25} height={60} width={60} borderWidth={3} borderColor={theme.colors.gray[50]} backgroundColor={focused ? theme.colors.green[600] : theme.colors.yellow[500]} >
-              <MIcon focused={focused} size={24} color={focused ? theme.colors.green[600] : theme.colors.gray[1]} name={'search'} />
+              <MIcon focused={focused} size={24} color={focused ? theme.colors.gray[1] : theme.colors.gray[1]} name={'search'} />
             </StyledCycle>
           )
         }

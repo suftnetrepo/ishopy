@@ -16,6 +16,7 @@ const MyCurrentLocation = () => {
                 fontWeight={theme.fontWeight.normal}
                 color={theme.colors.gray[800]}
                 fontSize={theme.fontSize.nano}
+                paddingHorizontal={4}
             >
                 Your Current location
             </StyledText>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { YStack, XStack, StyledCard, StyledSeparator, StyledImage, FlexStyledImage, StyledCycle, StyledBadge, StyledSafeAreaView, StyledSpinner, StyledOkDialog, StyledSpacer, StyledText } from 'fluent-styles';
+import { YStack, XStack, StyledCard, StyledSeparator, StyledImage, StyledConfirmDialog, StyledCycle, StyledBadge, StyledSafeAreaView, StyledSpinner, StyledOkDialog, StyledSpacer, StyledText } from 'fluent-styles';
 import Ionicons from 'react-native-vector-icons/MaterialIcons';
 import { useAppContext } from "../components/hooks/AppContext";
 import { ensureHttps, formatAddress } from '../util/helpers';
@@ -15,17 +15,24 @@ import { useSearchSeller } from '../components/hooks/useSearchSeller';
 const SearchSeller = () => {
 	const navigator = useNavigation()
 	const [isDialogVisible, setIsDialogVisible] = useState(false);
-	const { user, from, setFrom, saveSeller } = useAppContext()
+	const [isWarningDialogVisible, setIsWarningDialogVisible] = useState(false);
+	const { user, saveSeller, seller } = useAppContext()
 	const { data, loading, error, resetHandler, searchHandler, fetchAndLoadSellers, handleSellerSelect } = useSearchSeller()
 
 	const handleSelect = (seller) => {
-		const canPlaceOrder = handleSellerSelect(seller, saveSeller)
-		if (canPlaceOrder) {
-			navigator.navigate("bottomNavigator")
-		} else {
-			setIsDialogVisible(true)
+		const canPlaceOrder = handleSellerSelect(seller, saveSeller);
+
+		if (!canPlaceOrder) {
+			setIsDialogVisible(true);
+			return;
 		}
-	}
+
+		if (seller) {
+			setIsWarningDialogVisible(true)
+			return
+		}
+		navigator.navigate("bottomNavigator");
+	};
 
 	const RenderHeader = () => (
 		<XStack justifyContent='space-between'
@@ -36,27 +43,20 @@ const SearchSeller = () => {
 			<XStack justifyContent='flex-start'
 				alignItems='center'>
 				{
-					(from) && (
+					(seller) && (
 						<StyledCycle height={55} width={55} borderColor={theme.colors.gray[100]} backgroundColor={theme.colors.gray[100]}>
 							<Ionicons
 								name="close"
 								size={30}
 								color={theme.colors.gray[800]}
 								onPress={() => {
-									setFrom(false)
-									navigator.navigate("bottomNavigator", { screen: 'Settings' })
+									navigator.navigate("bottomNavigator", { screen: 'Home' })
 								}}
 							/>
 						</StyledCycle>
 					)
 				}
 				<StyledSpacer marginHorizontal={4} />
-				<FlexStyledImage
-					local={true}
-					height={24}
-					borderColor={theme.colors.gray[1]}
-					imageUrl={require("../assets/images/jerur_logo_only.png")}
-				/>
 			</XStack>
 		</XStack>
 	)
@@ -233,6 +233,22 @@ const SearchSeller = () => {
 					/>
 				)
 			}
+			{seller && isWarningDialogVisible &&
+				<StyledConfirmDialog
+					visible
+					description={`If you choose to find new seller, the existing ${seller?.name} settings will be replaced with those of the new seller, along with your card details. Would you like to proceed?`}
+					confirm='Yes'
+					cancel='No'
+					title={'Warning'}
+					onCancel={() => {
+						setIsWarningDialogVisible(false)
+						saveSeller({ seller })
+
+					}}
+					onConfirm={() => {
+						navigator.navigate("bottomNavigator", { screen: seller ? 'Home' : undefined });
+					}}
+				/>}
 
 		</StyledSafeAreaView>
 	);

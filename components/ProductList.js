@@ -116,7 +116,7 @@ const ProductList = ({navigation, products = []}) => {
               Popular Items
             </Text>
             <TouchableOpacity onPress={() => navigation.navigate('products')}>
-              <Text style={styles.seeAll}>See all</Text>
+              <Text style={styles.seeAll}>View all</Text>
             </TouchableOpacity>
           </View>
           <View style={styles.columnContainer}>
@@ -200,9 +200,9 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   seeAll: {
-    color: MATERIAL_COLORS.grey[500],
+    color: MATERIAL_COLORS.green[700],
     fontFamily: FONT_FAMILY.crimson_text_regular,
-    fontSize: MATERIAL_FONTS_SIZES.font_size_normal,
+    fontSize: MATERIAL_FONTS_SIZES.font_size_small,
   },
   text: {
     color: MATERIAL_COLORS.grey[800],

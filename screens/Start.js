@@ -32,8 +32,8 @@ const Start = ({ navigation }) => {
 				<View style={styles.header}>
 					<FlexStyledImage
 						local={true}
-						height={48}
-						width={48}
+						height={50}
+						width={50}
 						borderColor={theme.colors.gray[1]}
 						imageUrl={require("../assets/images/icons8-shopper-100.png")}
 					/>
@@ -135,7 +135,7 @@ const styles = StyleSheet.create({
 		alignItems: "center",
 		flexDirection: "row",
 		justifyContent: "space-between",
-		paddingVertical: 16
+		paddingVertical: 8
 	},
 	labelContainer: {
 		marginTop: 8,
