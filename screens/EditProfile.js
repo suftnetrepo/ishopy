@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from "react";
 import {
-	StatusBar,
 	View,
 	Text,
 	SafeAreaView,
 	StyleSheet,
 	TextInput,
 	TouchableOpacity,
-	ToastAndroid,
-	Platform,
 	Image
 } from "react-native";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
@@ -24,12 +21,13 @@ import { validate } from "../validators/validator";
 import { registerValidator } from "../validators/registerValidator";
 import { useAppContext } from "../components/hooks/AppContext";
 import ValidationMessage from "../components/ValidationMessage";
-import { deleteCustomer } from "../api";
+import { deleteCustomer, updateCustomer} from "../api";
 import Spacer from "../components/Spacer";
 import ConfirmDialog from "../components/ConfirmDialog";
+import { isIOS } from "../util/helpers";
 
 const EditProfile = ({ navigation }) => {
-	const { saveUser, user, token, logout } = useAppContext();
+	const { saveUser, user, token, logout,  } = useAppContext();
 	const [validationError, setValidationError] = useState({});
 	const [loading, setLoading] = useState(false);
 	const [isDialogVisible, setIsDialogVisible] = useState(false);
@@ -61,12 +59,10 @@ const EditProfile = ({ navigation }) => {
 
 			if (success) {
 				saveUser(data)
-				if (Platform.OS === "android") {
-					ToastAndroid.show("Your profile updates have been successfully saved.", ToastAndroid.SHORT)
-				}
 				navigation.navigate("settings")
 			}
 		} catch (e) {
+			if(__DEV__)
 			console.log(e);
 		} finally {
 			setLoading(false)
@@ -83,6 +79,7 @@ const EditProfile = ({ navigation }) => {
 				navigation.navigate("login")
 			}
 		} catch (e) {
+			if(__DEV__)
 			console.log(e);
 		} finally {
 			setLoading(false)
@@ -318,7 +315,7 @@ const styles = StyleSheet.create({
 		flex: 1,
 		fontSize: MATERIAL_FONTS_SIZES.font_size_normal,
 		color: MATERIAL_COLORS.grey[900],
-		height: 40
+		height: isIOS ? 40 : null
 	},
 	placeholder: {
 		color: MATERIAL_COLORS.grey[600],

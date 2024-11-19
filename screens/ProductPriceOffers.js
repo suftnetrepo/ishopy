@@ -170,14 +170,14 @@ const ProductPriceOffers = ({ navigation, route }) => {
             right: 4, }}>
         <StyledCycle
             borderWidth={1}
-            height={40}
-            width={40}
+            height={48}
+            width={48}
             backgroundColor={theme.colors.gray[100]}>
             <Icon
-              size={40}
+              size={48}
               name={'plus-circle'}
               color={theme.colors.green[600]}
-              onPress={()=> handleAddToCart(item)}
+              onPress={() => handleAddToCart(item)}
             />
           </StyledCycle>
         </View>

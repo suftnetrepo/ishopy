@@ -302,39 +302,34 @@ const CheckOut = ({ navigation, route }) => {
 	}
 	const RenderPayContainer = () => (
 		<>
-		<View style={styles.payOrderContainer}>
-			<View style={{ ...styles.columnContainer }}>
-				<View style={{ ...styles.rowContainer, justifyContent: 'space-between', width: "100%" }}>
-					<Text style={styles.summaryText}>Subtotal ({cart.length}) items: </Text>
-					<Text style={styles.summaryText}>{formatCurrency(seller.currency, subtotal)}</Text>
+			<View style={styles.payOrderContainer}>
+				<View style={{ ...styles.columnContainer }}>
+					<View style={{ ...styles.rowContainer, justifyContent: 'space-between', width: "100%" }}>
+						<Text style={styles.summaryText}>Subtotal ({cart.length}) items: </Text>
+						<Text style={styles.summaryText}>{formatCurrency(seller.currency, subtotal)}</Text>
+					</View>
+					<View style={{ ...styles.rowContainer, justifyContent: 'space-between', width: "100%" }}>
+						<Text style={styles.summaryText}>Delivery Charges: </Text>
+						<Text style={styles.summaryText}> {formatCurrency(seller.currency, deliveryCharges)}</Text>
+					</View>
+					{
+						seller.tax_rate > 0 && (
+							<View style={{ ...styles.rowContainer, justifyContent: 'space-between', width: "100%" }}>
+								<Text style={styles.summaryText}>Tax({seller.tax_rate})% : </Text>
+								<Text style={styles.summaryText}> {formatCurrency(seller.currency, total_tax)}</Text>
+							</View>
+						)
+					}
+					<View style={{ ...styles.rowContainer, justifyContent: 'space-between', width: "100%" }}>
+						<Text style={{ ...styles.summaryText, fontWeight: 'bold', fontSize: MATERIAL_FONTS_SIZES.font_size_xlarge }}>Total: </Text>
+						<Text style={{ ...styles.summaryText, fontWeight: 'bold', fontSize: MATERIAL_FONTS_SIZES.font_size_xlarge }}>{formatCurrency(seller.currency, grand_total)}</Text>
+					</View>
 				</View>
-				<View style={{ ...styles.rowContainer, justifyContent: 'space-between', width: "100%" }}>
-					<Text style={styles.summaryText}>Delivery Charges: </Text>
-					<Text style={styles.summaryText}> {formatCurrency(seller.currency, deliveryCharges)}</Text>
-				</View>
-				{
-					seller.tax_rate > 0 && (
-						<View style={{ ...styles.rowContainer, justifyContent: 'space-between', width: "100%" }}>
-							<Text style={styles.summaryText}>Tax({seller.tax_rate})% : </Text>
-							<Text style={styles.summaryText}> {formatCurrency(seller.currency, total_tax)}</Text>
-						</View>
-					)
-				}
-				<View style={{ ...styles.rowContainer, justifyContent: 'space-between', width: "100%" }}>
-					<Text style={{ ...styles.summaryText, fontWeight: 'bold', fontSize: MATERIAL_FONTS_SIZES.font_size_xlarge }}>Total: </Text>
-					<Text style={{ ...styles.summaryText, fontWeight: 'bold', fontSize: MATERIAL_FONTS_SIZES.font_size_xlarge }}>{formatCurrency(seller.currency, grand_total)}</Text>
-				</View>
+
 			</View>
-			
-		</View>
-		<TouchableOpacity
-				onPress={submitOrder}
-				style={styles.continue}
-			>
-				<Text style={styles.continue}>Place Order</Text>
-			</TouchableOpacity>
+
 		</>
-		
+
 	)
 	const RenderModalDialogue = () => (
 		<Modal animationType="fade" transparent={true} visible={modalVisible}>
@@ -390,26 +385,26 @@ const CheckOut = ({ navigation, route }) => {
 			setReturnUrlSchemeOnAndroid={true} >
 			<Spacer />
 			<View style={styles.header}>
-					<View style={styles.iconContainer}>
-						<Icon
-							name="arrow-left"
-							size={30}
-							color={MATERIAL_COLORS.grey[700]}
-							onPress={() => navigation.goBack()}
-						/>
-					</View>
-					<Text style={styles.headerText}>CheckOut</Text>
-					<View style={{ flex: 1 }} />
+				<View style={styles.iconContainer}>
+					<Icon
+						name="arrow-left"
+						size={30}
+						color={MATERIAL_COLORS.grey[700]}
+						onPress={() => navigation.goBack()}
+					/>
 				</View>
-				<ScrollView showsVerticalScrollIndicator={false}>
-					<RenderAddress />
-					<RenderShippingMethod />
-					<RenderPaymentMethod />				
-					<CartItems />
-					<RenderPayContainer />
-				</ScrollView>
-				<RenderModalDialogue />
-				<ProgressDialog isVisible={loading} />
+				<Text style={styles.headerText}>CheckOut</Text>
+				<View style={{ flex: 1 }} />
+			</View>
+			<ScrollView showsVerticalScrollIndicator={false}>
+				<RenderAddress />
+				<RenderShippingMethod />
+				<RenderPaymentMethod />
+				<CartItems />
+				<RenderPayContainer />
+			</ScrollView>
+			<RenderModalDialogue />
+			<ProgressDialog isVisible={loading} />
 		</StripeProvider>
 	)
 
@@ -417,30 +412,30 @@ const CheckOut = ({ navigation, route }) => {
 		<>
 			<Spacer />
 			<View style={styles.header}>
-					<View style={styles.iconContainer}>
-						<Icon
-							name="arrow-left"
-							size={30}
-							color={MATERIAL_COLORS.grey[700]}
-							onPress={() => navigation.goBack()}
-						/>
-					</View>
-					<Text style={styles.headerText}>CheckOut</Text>
-					<View style={{ flex: 1 }} />
+				<View style={styles.iconContainer}>
+					<Icon
+						name="arrow-left"
+						size={30}
+						color={MATERIAL_COLORS.grey[700]}
+						onPress={() => navigation.goBack()}
+					/>
 				</View>
-				<ScrollView showsVerticalScrollIndicator={false}>
-					<RenderAddress />
-					<RenderShippingMethod />
-					<RenderPaymentMethod />
-					<CartItems navigation={navigation} show={true} />
-					<RenderPayContainer />
-				</ScrollView>
-				<RenderModalDialogue />
-				<ProgressDialog isVisible={loading} />
+				<Text style={styles.headerText}>CheckOut</Text>
+				<View style={{ flex: 1 }} />
+			</View>
+			<ScrollView showsVerticalScrollIndicator={false}>
+				<RenderAddress />
+				<RenderShippingMethod />
+				<RenderPaymentMethod />
+				<CartItems navigation={navigation} show={true} />
+				<RenderPayContainer />
+			</ScrollView>
+			<RenderModalDialogue />
+			<ProgressDialog isVisible={loading} />
 		</>
 	)
 
-	return (<SafeAreaView>
+	return (<SafeAreaView style={{ flex: 1, flexDirection : 'column', justifyContent:'center', alignItems:'center' }}>
 		{
 			(paymentName === "Stripe") ? (
 				<RenderStripeProvider />
@@ -448,6 +443,12 @@ const CheckOut = ({ navigation, route }) => {
 				<RenderCashProvider />
 			)
 		}
+		<TouchableOpacity
+			onPress={submitOrder}
+			style={styles.continueContainer}
+		>
+			<Text style={styles.continue}>Place Order</Text>
+		</TouchableOpacity>
 	</SafeAreaView>
 	);
 };
@@ -496,26 +497,24 @@ const styles = StyleSheet.create({
 		position: "relative",
 	},
 	continue: {
+		color: MATERIAL_COLORS.grey[1],
+		fontSize: MATERIAL_FONTS_SIZES.font_size_large,
+		fontWeight: "bold",
+		paddingVertical: 10,
+		textAlign: "center"
+	},
+	continueContainer: {
 		backgroundColor: MATERIAL_COLORS.cyan[500],
 		borderColor: MATERIAL_COLORS.cyan[500],
 		borderRadius: 30,
 		borderWidth: 1,
-		color: MATERIAL_COLORS.grey[1],
-		fontSize: MATERIAL_FONTS_SIZES.font_size_large,
-		fontWeight: "bold",
-		paddingHorizontal: 20,
-		paddingVertical: 5,
-		textAlign: "center",
-		width: "95%",
-		marginHorizontal:10
-	},
-	continueContainer: {
 		alignItems: "center",
 		bottom: 8,
 		flexDirection: "column",
 		justifyContent: "center",
 		position: "absolute",
-		width: "100%",
+		width: "90%",
+
 	},
 	header: {
 		alignItems: "center",

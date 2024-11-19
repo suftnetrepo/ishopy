@@ -20,22 +20,13 @@ export default function BottomNavigator() {
 
   const tabBarPlatformStyle = Platform.select({
     ios: {
-      shadowColor: theme.colors.gray[1],
+      shadowColor: theme.colors.gray[500],
       shadowOffset: { width: 0, height: 10 },
       shadowOpacity: 0.25,
       shadowRadius: 3.5,
     },
     android: {
       elevation: 5,
-    },
-  });
-
-  const tabBarItemStyle = Platform.select({
-    ios: {
-      paddingVertical: 8
-    },
-    android: {
-
     },
   });
 
@@ -52,11 +43,11 @@ export default function BottomNavigator() {
           right: 20,
           backgroundColor: theme.colors.gray[100],
           borderRadius: 30,
-          height: 60,
+          height: 55,
           ...tabBarPlatformStyle
         },
         tabBarItemStyle: {
-          ...tabBarItemStyle,
+          paddingVertical: 8,
           pointerEvents: 'auto'
         }
 
@@ -65,7 +56,7 @@ export default function BottomNavigator() {
       <Tab.Screen name='Home' component={Start} options={{
         tabBarIcon: ({ focused }) => {
           return (
-            <Icon focused={focused} size={24} color={focused ? theme.colors.green[600] : theme.colors.gray[300]} name= {focused ? "home" : "home-outline"} />
+            <Icon focused={focused} size={32} color={focused ? theme.colors.green[600] : theme.colors.gray[300]} name= {focused ? "home" : "home-outline"} />
           )
         }
       }} />
@@ -73,7 +64,7 @@ export default function BottomNavigator() {
       <Tab.Screen name='Orders' component={token ? Orders : Login} options={{
         tabBarIcon: ({ focused }) => {
           return (
-            <Icon focused={focused} size={24} color={focused ? theme.colors.green[600] : theme.colors.gray[300]} name={focused ? "shopping" : "shopping-outline"} />
+            <Icon focused={focused} size={32} color={focused ? theme.colors.green[600] : theme.colors.gray[300]} name={focused ? "shopping" : "shopping-outline"} />
           )
         }
       }} />
@@ -82,7 +73,7 @@ export default function BottomNavigator() {
         tabBarIcon: ({ focused }) => {
           return (
             <StyledCycle marginTop={-25} height={60} width={60} borderWidth={3} borderColor={theme.colors.gray[50]} backgroundColor={focused ? theme.colors.green[600] : theme.colors.yellow[500]} >
-              <MIcon focused={focused} size={24} color={focused ? theme.colors.gray[1] : theme.colors.gray[1]} name={'search'} />
+              <MIcon focused={focused} size={32} color={focused ? theme.colors.gray[1] : theme.colors.gray[1]} name={'search'} />
             </StyledCycle>
           )
         }
@@ -91,7 +82,7 @@ export default function BottomNavigator() {
       <Tab.Screen name='edit-profile' component={token ? EditProfile : Login} options={{
         tabBarIcon: ({ focused }) => {
           return (
-            <Icon focused={focused} size={24} color={focused ? theme.colors.green[600] : theme.colors.gray[300]} name={"account-circle"} />
+            <Icon focused={focused} size={32} color={focused ? theme.colors.green[600] : theme.colors.gray[300]} name={"account-circle"} />
           )
         }
       }} />
@@ -99,7 +90,7 @@ export default function BottomNavigator() {
       <Tab.Screen name='Settings' component={Settings} options={{
         tabBarIcon: ({ focused }) => {
           return (
-            <MIcon focused={focused} size={24} color={focused ? theme.colors.green[600] : theme.colors.gray[300]} name='settings' />
+            <MIcon focused={focused} size={32} color={focused ? theme.colors.green[600] : theme.colors.gray[300]} name='settings' />
           )
         }
       }} />

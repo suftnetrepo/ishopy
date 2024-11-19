@@ -33,6 +33,7 @@
 		365E25D22CE4E4D100A95B88 /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 365E259B2CE4E4D100A95B88 /* FontAwesome5_Regular.ttf */; };
 		365E25D32CE4E4D100A95B88 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 365E25982CE4E4D100A95B88 /* Feather.ttf */; };
 		365E25D42CE4E4D100A95B88 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 365E25B32CE4E4D100A95B88 /* Zocial.ttf */; };
+		36CDC6042CEB5DB800145589 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36CDC6032CEB5DB800145589 /* Images.xcassets */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		AF8F76E126942B9C35D6CE9C /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
 		B11C8E07966F0DF3EB2FCE6D /* libPods-iShopy-iShopyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B4833655A4FC15BFFBE59CD /* libPods-iShopy-iShopyTests.a */; };
@@ -83,6 +84,7 @@
 		365E25AF2CE4E4D100A95B88 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		365E25B22CE4E4D100A95B88 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleLineIcons.ttf; sourceTree = "<group>"; };
 		365E25B32CE4E4D100A95B88 /* Zocial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Zocial.ttf; sourceTree = "<group>"; };
+		36CDC6032CEB5DB800145589 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4B4833655A4FC15BFFBE59CD /* libPods-iShopy-iShopyTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iShopy-iShopyTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A6EA8D1355E0B004FE4954C /* libPods-iShopy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iShopy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = iShopy/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				36CDC6032CEB5DB800145589 /* Images.xcassets */,
 				365E25922CE4E4D100A95B88 /* AntDesign.ttf */,
 				365E25932CE4E4D100A95B88 /* CrimsonText-Bold.ttf */,
 				365E25942CE4E4D100A95B88 /* CrimsonText-Italic.ttf */,
@@ -313,6 +316,7 @@
 				365E25B62CE4E4D100A95B88 /* AntDesign.ttf in Resources */,
 				365E25B82CE4E4D100A95B88 /* Roboto-Bold.ttf in Resources */,
 				365E25B92CE4E4D100A95B88 /* Octicons.ttf in Resources */,
+				36CDC6042CEB5DB800145589 /* Images.xcassets in Resources */,
 				365E25BB2CE4E4D100A95B88 /* Roboto-Regular.ttf in Resources */,
 				365E25BD2CE4E4D100A95B88 /* CrimsonText-Italic.ttf in Resources */,
 				365E25BE2CE4E4D100A95B88 /* SimpleLineIcons.ttf in Resources */,
@@ -557,11 +561,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = ZQADUF26X5;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = iShopy/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.shopping";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -572,7 +577,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.suftnet.b2;
 				PRODUCT_NAME = iShopy;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -586,10 +591,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = ZQADUF26X5;
 				INFOPLIST_FILE = iShopy/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.shopping";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -600,7 +606,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.suftnet.b2;
 				PRODUCT_NAME = iShopy;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -676,10 +682,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
@@ -748,10 +751,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;

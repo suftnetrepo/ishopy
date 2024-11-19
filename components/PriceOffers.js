@@ -1,9 +1,8 @@
 /* eslint-disable react-native/no-unused-styles */
-import React, { useEffect, useReducer, useState } from "react";
+import React, { useEffect, useReducer } from "react";
 import {
 	View,
 	Text,
-	FlatList,
 	StyleSheet,
 	TouchableOpacity,
 	Image,
@@ -11,11 +10,7 @@ import {
 	ScrollView,
 } from "react-native";
 import {
-	XStack,
-	StyledText,
-	StyledButton,
 	StyledCycle,
-	StyledSpacer,
   } from 'fluent-styles';
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import { MATERIAL_COLORS, MATERIAL_FONTS_SIZES, FONT_FAMILY, VERBS } from "../constants";
@@ -23,7 +18,7 @@ import { useAppContext } from "../components/hooks/AppContext";
 import { fetchItemByPriceOffers } from '../api';
 import { formatCurrency } from "../util/helpers"
 import { theme } from "../util/theme";
-
+import { useCart } from "./hooks/CartProvider";
 
 const { width } = Dimensions.get("window");
 
@@ -50,6 +45,7 @@ function reducer(state, action) {
 
 const PriceOffers = ({ navigation }) => {
 	const { seller } = useAppContext()
+	const {addToCart} = useCart();
 	const [state, dispatch] = useReducer(reducer, initialState);
 
 	useEffect(() => {
@@ -88,7 +84,12 @@ const PriceOffers = ({ navigation }) => {
 		});
 	};
 
-	if (state.products.length === 0) {
+	const handleAddToCart = async item => {
+		item.isAdded = true;
+		await addToCart(item);
+	  };
+
+	if (state?.products?.length === 0) {
 		return null
 	}
 
@@ -140,11 +141,11 @@ const PriceOffers = ({ navigation }) => {
 				<View style={{ ...styles.rowContainer, justifyContent: 'flex-end', marginRight: 16, marginTop: 8 }}>
 					<StyledCycle
 						borderWidth={1}
-						height={40}
-						width={40}
+						height={48}
+						width={48}
 						backgroundColor={theme.colors.gray[1]}>
 						<Icon
-							size={40}
+							size={48}
 							name={'plus-circle'}
 							color={theme.colors.green[600]}
 							onPress={() => handleAddToCart(item)}
@@ -168,7 +169,7 @@ const PriceOffers = ({ navigation }) => {
 			</View>
 			<ScrollView horizontal showsHorizontalScrollIndicator={false}>
 				{
-					state.products.map((proudct, index) => {
+					state?.products?.map((proudct, index) => {
 						return (
 							<Card
 								key={`${proudct._id}-${index}`}

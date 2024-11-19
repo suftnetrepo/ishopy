@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {ORDER_STATUS} from '../constants';
+import React, { useState } from 'react';
+import { ORDER_STATUS } from '../constants';
 
 import {
   XStack,
@@ -9,14 +9,14 @@ import {
   StyledSpacer,
   YStack,
 } from 'fluent-styles';
-import {ScrollView} from 'react-native';
+import { ScrollView } from 'react-native';
 
-import {fontStyles} from '../util/fontStyles';
-import {theme} from '../util/theme';
-import {StyledMIcon} from './package/icon';
+import { fontStyles } from '../util/fontStyles';
+import { theme } from '../util/theme';
+import { StyledMIcon } from './package/icon';
 
-const OrderStatus = ({onPress}) => {
-  const [selected, setSelected] = useState('-1');
+const OrderStatus = ({ onPress }) => {
+  const [selected, setSelected] = useState('All');
 
   const handleSelect = status => {
     setSelected(status);
@@ -38,32 +38,32 @@ const OrderStatus = ({onPress}) => {
                   backgroundColor={theme.colors.gray[100]}
                   onPress={() => handleSelect(status)}>
                   <XStack
-                    paddingHorizontal={6}
-                    paddingVertical={5}
+                    paddingHorizontal={10}
+                    paddingVertical={7}
                     key={index}
                     justifyContent="flex-start"
                     alignItems="center">
-						{
-							selected === status && (
-								<StyledCycle
-								borderWidth={1}
-								height={30}
-								width={30}
-								borderColor={theme.colors.gray[200]}
-								backgroundColor={theme.colors.gray[800]}>
-								<StyledMIcon
-								  size={24}
-								  name={'check'}
-								  color={theme.colors.gray[1]}
-								/>
-							  </StyledCycle>
-							)
-						}
-                   
+                    {
+                      selected === status && (
+                        <StyledCycle
+                          borderWidth={1}
+                          height={30}
+                          width={30}
+                          borderColor={theme.colors.gray[200]}
+                          backgroundColor={theme.colors.gray[800]}>
+                          <StyledMIcon
+                            size={24}
+                            name={'check'}
+                            color={theme.colors.gray[1]}
+                          />
+                        </StyledCycle>
+                      )
+                    }
+
                     <StyledSpacer marginHorizontal={1} />
                     <StyledText
                       fontFamily={fontStyles.Roboto_Regular}
-                      fontSize={theme.fontSize.small}
+                      fontSize={theme.fontSize.normal}
                       color={theme.colors.gray[800]}>
                       {status}
                     </StyledText>

@@ -5,13 +5,10 @@ import {
   View,
   Text,
   StyleSheet,
-  StatusBar,
   SafeAreaView,
   TouchableOpacity,
   TextInput,
-  Platform,
-  ToastAndroid
-} from "react-native";
+ } from "react-native";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import { MATERIAL_COLORS, MATERIAL_FONTS_SIZES, MATERIAL_SPACING, FONT_FAMILY, VERBS } from "../constants";
@@ -22,6 +19,7 @@ import { updateCustomerShippingAddress } from "../api";
 import { validate } from "../validators/validator";
 import ProgressDialog from "../components/ProgressDialog";
 import Spacer from "../components/Spacer";
+import { isIOS } from "../util/helpers";
 
 const EditShippingAddress = ({ navigation }) => {
   const { user, token, updateCurrentUser, from } = useAppContext()
@@ -56,16 +54,13 @@ const EditShippingAddress = ({ navigation }) => {
           shipping_address: fields
         }
         updateCurrentUser(copyUser)
-
-        if (Platform.OS === "android") {
-          ToastAndroid.show("Your shipping address was updated successfully.", ToastAndroid.SHORT)
-        }
-
+     
         if (from === "settings") {
           navigation.navigate("settings")
         }
       }
     } catch (e) {
+      if(__DEV__)
       console.log(e);
     } finally {
       setLoading(false)
@@ -342,7 +337,7 @@ const styles = StyleSheet.create({
     fontSize: MATERIAL_FONTS_SIZES.font_size_medium,
     color: MATERIAL_COLORS.grey[900],
     backgroundColor: MATERIAL_COLORS.grey[1],
-    height : 40
+    height: isIOS ? 40 : null
   },
   placeholder: {
     color: MATERIAL_COLORS.grey[600],

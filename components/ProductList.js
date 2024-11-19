@@ -11,16 +11,11 @@ import {
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {MATERIAL_COLORS, FONT_FAMILY, MATERIAL_FONTS_SIZES} from '../constants';
 import {
-  XStack,
-  StyledText,
-  StyledButton,
   StyledCycle,
-  StyledSpacer,
 } from 'fluent-styles';
 import {formatCurrency} from '../util/helpers';
 import {useAppContext} from './hooks/AppContext';
 import {useCart} from './hooks/CartProvider';
-import {StyledMIcon} from './package/icon';
 import { theme } from '../util/theme';
 
 const screenWidth = Dimensions.get('window').width;
@@ -92,11 +87,11 @@ const ProductList = ({navigation, products = []}) => {
           }}>
           <StyledCycle
             borderWidth={1}
-            height={40}
-            width={40}
+            height={48}
+            width={48}
             backgroundColor={theme.colors.gray[100]}>
             <Icon
-              size={40}
+              size={48}
               name={'plus-circle'}
               color={theme.colors.green[600]}
               onPress={()=> handleAddToCart(item)}

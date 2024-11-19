@@ -6,13 +6,17 @@ import {
 	StyleSheet,
 	ImageBackground,
 	Dimensions,
-	ScrollView
+	ScrollView,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { MATERIAL_COLORS, MATERIAL_FONTS_SIZES, FONT_FAMILY } from '../../constants';
-import { formatCurrency } from '../../util/helpers';
+import { formatCurrency, isIOS } from '../../util/helpers';
 import { useAppContext } from '../hooks/AppContext';
 import AddItemToCart from '../AddItemToCart';
+import { getStatusBarHeight } from 'react-native-status-bar-height';
+import Spacer from '../Spacer';
+
+
 
 const { width } = Dimensions.get('window');
 
@@ -29,6 +33,7 @@ const ProductInfo = ({ product, navigation }) => {
 	  
 	const RenderHeader = () => (
 		<View style={styles.header}>
+			<Spacer />
 			<View style={styles.iconContainer}>
 				<Icon
 					name="arrow-left"
@@ -124,9 +129,9 @@ const styles = StyleSheet.create({
 	header: {
 		alignItems: 'center',
 		flexDirection: 'row',
-		height: 56,
+		
 		justifyContent: 'flex-start',
-		marginTop: 20,
+		marginTop : isIOS ? 0 : 20,
 		paddingHorizontal: 20,
 		paddingVertical: 8,
 	},
@@ -149,7 +154,7 @@ const styles = StyleSheet.create({
 	},
 	image: {
 		height: 350,
-		width: width,
+		width: width
 	},
 	mobile: {
 		color: MATERIAL_COLORS.grey[700],

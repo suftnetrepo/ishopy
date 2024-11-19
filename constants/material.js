@@ -1,3 +1,5 @@
+import { Platform } from 'react-native';
+
 export const MATERIAL_COLORS = {
   red: {
     50: "#ffebee",
@@ -368,10 +370,30 @@ export const GENERIC_SIZES = {
 };
 
 export const FONT_FAMILY = {
-  crimson_text_bold: "crimson_text_bold",
-  crimson_text_italic: "crimson_text_italic",
-  crimson_text_regular: "crimson_text_regular",
-  crimson_text: "crimson_text",
+  crimson_text_bold: Platform.select({
+    ios: 'Roboto-Bold', 
+    android: 'Roboto-Bold', 
+  }),
+  crimson_text_italic: Platform.select({
+    ios: 'Roboto-Italic', 
+    android: 'Roboto-Italic', 
+  }),
+  crimson_text_regular: Platform.select({
+    ios: 'Roboto-Regular', 
+    android: 'Roboto-Regular', 
+  }),
+  Roboto_Regular: Platform.select({
+    ios: 'Roboto-Regular', 
+    android: 'Roboto-Regular', 
+  }),
+  Roboto_Italic: Platform.select({
+    ios: 'Roboto-Italic', 
+    android: 'Roboto-Italic', 
+  }),
+  Roboto_Bold: Platform.select({
+    ios: 'Roboto-Bold', 
+    android: 'Roboto-Bold', 
+  }),
 };
 
 export const SHADOWS = {

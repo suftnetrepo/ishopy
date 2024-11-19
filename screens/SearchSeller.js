@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { YStack, XStack, StyledCard, StyledSeparator, StyledImage, StyledConfirmDialog, StyledCycle, StyledBadge, StyledSafeAreaView, StyledSpinner, StyledOkDialog, StyledSpacer, StyledText } from 'fluent-styles';
 import Ionicons from 'react-native-vector-icons/MaterialIcons';
 import { useAppContext } from "../components/hooks/AppContext";
@@ -11,13 +11,22 @@ import { FlatList } from 'react-native';
 import MyCurrentLocation from '../components/MyCurrentLocation';
 import SliderWithKnobLabel from '../components/SliderWithKnobLabel';
 import { useSearchSeller } from '../components/hooks/useSearchSeller';
+import { useIsFocused } from '@react-navigation/native';
 
 const SearchSeller = () => {
 	const navigator = useNavigation()
+	const isFocused = useIsFocused();
 	const [isDialogVisible, setIsDialogVisible] = useState(false);
 	const [isWarningDialogVisible, setIsWarningDialogVisible] = useState(false);
 	const { user, saveSeller, seller } = useAppContext()
 	const { data, loading, error, resetHandler, searchHandler, fetchAndLoadSellers, handleSellerSelect } = useSearchSeller()
+
+	useEffect(() => {
+		if (isFocused) {
+			setIsWarningDialogVisible(false)
+			setIsDialogVisible(false)
+		}
+	  }, [isFocused]);
 
 	const handleSelect = (seller) => {
 		const canPlaceOrder = handleSellerSelect(seller, saveSeller);
@@ -26,11 +35,12 @@ const SearchSeller = () => {
 			setIsDialogVisible(true);
 			return;
 		}
-
+		
 		if (seller) {
 			setIsWarningDialogVisible(true)
 			return
 		}
+
 		navigator.navigate("bottomNavigator");
 	};
 

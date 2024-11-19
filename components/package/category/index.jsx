@@ -24,7 +24,7 @@ const CategoryScrollView = ({ onPress, categories = [] }) => {
                         return (
                             <XStack key={index} >
                                 <StyledButton borderColor={theme.colors.green[600]} backgroundColor={theme.colors.gray[100]} onPress={() => handleSelect(category)} >
-                                    <XStack paddingHorizontal={6} paddingVertical={5} key={index} justifyContent="flex-start" alignItems="center">
+                                    <XStack paddingHorizontal={10} paddingVertical={10} key={index} justifyContent="flex-start" alignItems="center">
                                         {
                                             selected === category._id &&  (
                                                 <StyledCycle borderWidth={1} height={30} width={30} borderColor={theme.colors.green[600]} backgroundColor={theme.colors.green[600]}>
@@ -33,7 +33,7 @@ const CategoryScrollView = ({ onPress, categories = [] }) => {
                                             )
                                         }
                                       
-                                        <StyledText paddingHorizontal={2} fontFamily={fontStyles.c} fontSize={theme.fontSize.small} color={theme.colors.gray[800]} >{category.name}</StyledText>
+                                        <StyledText paddingHorizontal={2} fontFamily={fontStyles.c} fontSize={theme.fontSize.normal} color={theme.colors.gray[800]} >{category.name}</StyledText>
                                     </XStack>
                                 </StyledButton>
                                 <StyledSpacer marginHorizontal={4} />

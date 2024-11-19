@@ -7,8 +7,8 @@ const CLOUDINARY_UPLOAD_URL =
 const MAP_MOB =
   "pk.eyJ1Ijoia2Nta2NtMTIzNDUiLCJhIjoiY2xoY2UwYWlvMTByeDNsbnVxMDgzNGkydSJ9.-eRx20Td26hSDCkttb5giQ";
 
-// const HOST = "https://ishopy.co.uk/api/"
-const HOST = "https://suftnetdev.arnaty.com/api/"
+const HOST = "https://ishopy.co.uk/api/"
+// const HOST = "https://suftnetdev.arnaty.com/api/"
 // const HOST = "http://192.168.0.108:8000/api/"
 
 export {

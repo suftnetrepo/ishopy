@@ -81,8 +81,8 @@ const ShoppingCard = ({ navigation }) => {
           <Text style={{ ...styles.name, flex: 5 }}>{item.name}</Text>
           <TouchableOpacity onPress={() => removeFromCart(item._id)}>
             <Icon
-              name="delete"
-              size={30}
+              name="close-circle"
+              size={48}
               color={MATERIAL_COLORS.grey[800]}
               style={{ flex: 1 }}
             />
@@ -119,9 +119,9 @@ const ShoppingCard = ({ navigation }) => {
       <RenderHeader />
       <View style={{ marginVertical: 4 }}></View>
       {
-        cart.length > 0 ? (
+        cart?.length > 0 ? (
           <>
-            <View style={{ flex: 1, paddingHorizontal: 8, marginHorizontal: 8, paddingBottom: 56, backgroundColor: MATERIAL_COLORS.grey[200] }}>
+            <View style={{ flex: 1, paddingHorizontal: 8, marginHorizontal: 8, backgroundColor: MATERIAL_COLORS.grey[200] }}>
               <FlatList
                 initialNumToRender={100}
                 decelerationRate={"fast"}

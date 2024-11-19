@@ -24,6 +24,7 @@ import ValidationMessage from "../components/ValidationMessage";
 import PrivacyConsent from "../components/privacyConsent";
 import { signUp } from "../api";
 import Spacer from "../components/Spacer";
+import { isIOS } from "../util/helpers";
 
 const Register = ({ navigation }) => {
 	const { saveUser, from, user, seller } = useAppContext();
@@ -286,7 +287,7 @@ const styles = StyleSheet.create({
 		flex: 1,
 		fontSize: MATERIAL_FONTS_SIZES.font_size_normal,
 		color: MATERIAL_COLORS.grey[900],
-		height : 35
+		height: isIOS ? 40 : null,
 	},
 	placeholder: {
 		color: MATERIAL_COLORS.grey[600],

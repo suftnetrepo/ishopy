@@ -23,6 +23,7 @@ import { verifyAppCode } from "../api";
 import Spacer from "../components/Spacer";
 import { useAppContext } from "../components/hooks/AppContext";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
+import { isIOS } from "../util/helpers";
 
 const Login = ({ navigation }) => {
 	const { seller } = useAppContext()
@@ -94,15 +95,15 @@ const Login = ({ navigation }) => {
 					<View style={{ ...styles.inputContainer }}>
 						<Text style={styles.label}>Email</Text>
 						<TextInput
-								value={fields.email}
-								placeholder="Email"
-								maxLength={50}
-								keyboardType="email-address"
-								autoCapitalize={"none"}
-								autoCorrect={false}
-								onChangeText={(value) => setFields({ ...fields, email: value })}
-								style={{ ...styles.inputText }}
-							></TextInput>
+							value={fields.email}
+							placeholder="Email"
+							maxLength={50}
+							keyboardType="email-address"
+							autoCapitalize={"none"}
+							autoCorrect={false}
+							onChangeText={(value) => setFields({ ...fields, email: value })}
+							style={{ ...styles.inputText }}
+						></TextInput>
 						{validationError.email && (
 							<ValidationMessage message={validationError.email.message} />
 						)}
@@ -210,7 +211,7 @@ const styles = StyleSheet.create({
 	},
 	inputText: {
 		color: MATERIAL_COLORS.grey[900],
-		height: 35,
+		height: isIOS ? 40 : null,
 		fontSize: MATERIAL_FONTS_SIZES.font_size_normal,
 		alignItems: "center",
 		borderColor: MATERIAL_COLORS.grey[500],

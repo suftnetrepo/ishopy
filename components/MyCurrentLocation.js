@@ -13,9 +13,9 @@ const MyCurrentLocation = () => {
             alignItems='flex-start'>
             <StyledText
                 fontFamily={fontStyles.Roboto_Regular}
-                fontWeight={theme.fontWeight.normal}
+                fontWeight={theme.fontWeight.semiBold}
                 color={theme.colors.gray[800]}
-                fontSize={theme.fontSize.nano}
+                fontSize={theme.fontSize.small}
                 paddingHorizontal={4}
             >
                 Your Current location

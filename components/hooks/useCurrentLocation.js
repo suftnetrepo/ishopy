@@ -43,7 +43,7 @@ const useCurrentLocation = () => {
             setState((pre) => ({
                 ...pre,
                 loading: false,
-                error: error instanceof Error ? error?.message : 'Failed to fetch address.',
+                error: 'Failed to fetch address.',
             }));
         }
     };
