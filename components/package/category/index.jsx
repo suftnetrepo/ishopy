@@ -33,7 +33,7 @@ const CategoryScrollView = ({ onPress, categories = [] }) => {
                                             )
                                         }
                                       
-                                        <StyledText paddingHorizontal={2} fontFamily={fontStyles.c} fontSize={theme.fontSize.normal} color={theme.colors.gray[800]} >{category.name}</StyledText>
+                                        <StyledText paddingHorizontal={2} fontFamily={fontStyles.Roboto_Regular} fontSize={theme.fontSize.normal} color={theme.colors.gray[800]} >{category.name}</StyledText>
                                     </XStack>
                                 </StyledButton>
                                 <StyledSpacer marginHorizontal={4} />

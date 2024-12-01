@@ -14,13 +14,15 @@ import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import { MATERIAL_COLORS, MATERIAL_FONTS_SIZES, MATERIAL_SPACING, FONT_FAMILY } from "../constants";
 import { useCart } from "../components/hooks/CartProvider";
 import AddItemToCart from "../components/AddItemToCart";
-import { calculateCartTotal, formatCurrency } from '../util/helpers';
+import { calculateCartTotal, cartTotal, formatCurrency } from '../util/helpers';
 import { useAppContext } from "../components/hooks/AppContext";
 import Spacer from "../components/Spacer";
+import MinimumOrder from "../components/MinimunOrder";
 
 const ShoppingCard = ({ navigation }) => {
   const { cart = [], removeFromCart } = useCart()
-  const { seller: { currency, canPlaceOrder }, user, setFrom } = useAppContext()
+  const { seller, user, setFrom } = useAppContext()
+  const { currency, canPlaceOrder } = seller
   const redirectToLogin = "login";
   const redirectToShippingMethod = "shipping-method";
   const redirectToShippingAddress = "shipping-address";
@@ -91,7 +93,7 @@ const ShoppingCard = ({ navigation }) => {
         </View>
         <Text style={styles.unit}>Unit: {item.unit}</Text>
         <Text style={styles.price}>{formatCurrency(currency, item.price)}</Text>
-        <View style={{...styles.rowContainer, justifyContent: 'flex-end'}}>
+        <View style={{ ...styles.rowContainer, justifyContent: 'flex-end' }}>
           <AddItemToCart item={item} />
         </View>
       </View>
@@ -132,21 +134,33 @@ const ShoppingCard = ({ navigation }) => {
               />
             </View>
             {
-              canPlaceOrder && (
-                <TouchableOpacity
-                  style={styles.continueContainer}
-                  onPress={handleCheckOut}
-                >
-                  <View style={{ ...styles.continue }}>
-                    <View style={styles.rowContainer}>
-                      <Text style={styles.checkOutAmountText}>{calculateCartTotal(currency, cart)}</Text>
-                      <Text style={styles.checkOutText} >CheckOut</Text>
-                    </View>
+              cartTotal(cart) > seller?.minimum_delivery_order ? (
+                <>
+                  {
+                    canPlaceOrder && (
+                      <TouchableOpacity
+                        style={styles.continueContainer}
+                        onPress={handleCheckOut}
+                      >
+                        <View style={{ ...styles.continue }}>
+                          <View style={styles.rowContainer}>
+                            <Text style={styles.checkOutAmountText}>{calculateCartTotal(currency, cart)}</Text>
+                            <Text style={styles.checkOutText} >CheckOut</Text>
+                          </View>
 
-                  </View>
+                        </View>
 
-                </TouchableOpacity>
-              )
+                      </TouchableOpacity>
+                    )
+                  }
+
+                </>
+              ) : <View style={{ marginHorizontal: 16, marginBottom : 16 }}>
+                <MinimumOrder seller={seller} navigation={navigation} />
+              </View>
+            }
+            {
+
             }
 
           </>
@@ -245,7 +259,7 @@ const styles = StyleSheet.create({
     height: 110,
     marginRight: 10,
     width: 70,
-    borderRadius : 16
+    borderRadius: 16
   },
   message: {
     fontFamily: FONT_FAMILY.crimson_text_regular,
@@ -264,7 +278,7 @@ const styles = StyleSheet.create({
     fontFamily: FONT_FAMILY.crimson_text_regular,
     fontSize: MATERIAL_FONTS_SIZES.font_size_medium,
     fontWeight: 'bold',
-   
+
   },
   rowContainer: {
     alignItems: 'center',

@@ -86,11 +86,6 @@ const Start = ({ navigation }) => {
 					</YStack>
 				</YStack>
 			</StyledBackgroundImage>
-			{/* {
-				seller.minimum_delivery_order > 0 && (
-					<MinimumOrder seller={seller} />
-				)
-			} */}
 			<ScrollView showsVerticalScrollIndicator={false} >
 				<View style={{ ...styles.labelContainer }}>
 					<CategoryScrollView onPress={(category) => {
@@ -99,13 +94,7 @@ const Start = ({ navigation }) => {
 						})
 					}} categories={data?.categories} />
 				</View>
-				{
-					!seller.canPlaceOrder && (
-						<View style={{ ...styles.labelContainer }}>
-							<OutOfDeliveryRangeMessage />
-						</View>
-					)
-				}
+				
 				<View style={{ ...styles.labelContainer, marginTop: 8 }}>
 					<PriceOffers navigation={navigation} />
 				</View>

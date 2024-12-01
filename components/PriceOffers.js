@@ -160,7 +160,7 @@ const PriceOffers = ({ navigation }) => {
 	return (
 		<View style={styles.container}>
 			<View style={styles.topItemsTextContainer}>
-				<Text style={{ ...styles.topItemsTitle }}>Price Offers</Text>
+				<Text style={{ ...styles.topItemsTitle }}>Special Offer</Text>
 				<TouchableOpacity
 					onPress={() => navigation.navigate("product-price-offers")}
 				>

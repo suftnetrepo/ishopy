@@ -197,6 +197,17 @@ const calculateCartTotal = (currency, cart) => {
   return formatCurrency(currency, total);
 };
 
+const cartTotal = (cart) => {
+  let total = 0;
+
+  for (const item of cart) {
+    const subtotal = item.quantity * item.price;
+    total += subtotal;
+  }
+
+  return total;
+};
+
 function formatAddressParts(address) {
   const { suburb, city, state, postcode, country, country_code, place } = address;
   const addressPartsToInclude = [];
@@ -288,4 +299,4 @@ function ensureHttps(url) {
   return url; // Return the original URL if it's already secure or doesn't need changes.
 }
 
-export {ensureHttps, convertToShortDate, formatPaymentMethodName, generatePaymentId, completeAddress, formatAddressParts, calculateCartTotal, haversineDistance, getDayMonthName, timeStampConverter, currencySymbolMapper, getStripe, getTimeDifference, getGreetings, formatAddress, percentage, calculateDaysLeft, formatCurrency };
+export {cartTotal, ensureHttps, convertToShortDate, formatPaymentMethodName, generatePaymentId, completeAddress, formatAddressParts, calculateCartTotal, haversineDistance, getDayMonthName, timeStampConverter, currencySymbolMapper, getStripe, getTimeDifference, getGreetings, formatAddress, percentage, calculateDaysLeft, formatCurrency };
