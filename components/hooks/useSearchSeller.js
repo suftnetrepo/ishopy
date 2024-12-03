@@ -5,7 +5,7 @@ import { fetchByCoordinates } from '../../api';
 import { VERBS } from '../../constants';
 
 const useSearchSeller = () => {
-    const location = useLocation()
+    const {location, loading, error } = useLocation()
     const [state, setState] = useState({
         data: [],
         copy: [],
@@ -46,6 +46,7 @@ const useSearchSeller = () => {
                 })
             }
         }
+
     };
 
     const handleSellerSelect = (seller, saveSeller) => {
@@ -99,6 +100,8 @@ const useSearchSeller = () => {
 
     return {
         ...state,
+        loading,
+        error,
         searchHandler,
         resetHandler,
         fetchAndLoadSellers,

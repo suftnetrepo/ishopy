@@ -44,7 +44,7 @@
 		<true/>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>We need your location to enhance app functionality.</string>
+	<string>This app uses your location to find nearby shores and deliver personalized recommendations.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>CrimsonText-Bold.ttf</string>

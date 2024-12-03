@@ -228,7 +228,7 @@ const SearchSeller = () => {
 				/>
 			</YStack>
 			{(error) && (
-				<StyledOkDialog title={error?.message} description='Please try again ' visible={true} onOk={resetHandler} />
+				<StyledOkDialog title={error?.message}  visible={true} onOk={resetHandler} />
 			)}
 			{loading && (
 				<StyledSpinner />

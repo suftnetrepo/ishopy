@@ -155,7 +155,7 @@ const ShoppingCard = ({ navigation }) => {
                   }
 
                 </>
-              ) : <View style={{ marginHorizontal: 16, marginBottom : 16 }}>
+              ) : <View style={{ marginHorizontal: 48, marginBottom : 16 }}>
                 <MinimumOrder seller={seller} navigation={navigation} />
               </View>
             }

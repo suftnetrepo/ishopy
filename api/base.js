@@ -27,7 +27,6 @@ export const postJSON = async (url, body, method, token = null, queryParams = nu
     const response = await fetch(url, requestOptions);
 
     if (!response.ok) {
-      console.log("++++++++++++++++", response)
       throw new Error(`Network response was not ok: ${response}`);
     }
       
@@ -35,7 +34,6 @@ export const postJSON = async (url, body, method, token = null, queryParams = nu
 
     return { success: true, data: results };
   } catch (error) {
-    console.error(`Fetch error: ${error}`);
     return { success: false, error };
   }
 };
