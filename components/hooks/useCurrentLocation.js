@@ -8,7 +8,7 @@ const useCurrentLocation = () => {
         error: {},
         success: false
     })
-    const location = useLocation()
+    const {location} = useLocation()
 
     const reverseGeocode = async (latitude, longitude) => {
         try {
